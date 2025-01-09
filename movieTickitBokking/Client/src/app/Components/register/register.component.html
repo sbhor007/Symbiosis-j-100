@@ -1,0 +1,87 @@
+<app-navbar></app-navbar>
+<div class="background-container" [ngStyle]="{ 'background-image': 'url(' + imagePath + ')' }">
+  <div class="login-container">
+    <!-- Left side: Red background section -->
+    <div class="left-side">
+      <span class="text-white text-4xl font-semibold"></span>
+    </div>
+
+    <!-- Right side: Login form -->
+    <div class="login-form">
+      <div class="form-container">
+        <h2 class="form-heading">User Registration</h2>
+
+        <form (ngSubmit)="onSubmit()" class="w-full">
+          <!-- Name Input -->
+          <div class="input-group">
+            <label for="name" class="form-label">Name</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Enter Your Name"
+              required
+              [(ngModel)]="fullName"
+              name="name"
+              class="form-input"
+            />
+          </div>
+
+          <!-- Email Input -->
+          <div class="input-group">
+            <label for="email" class="form-label">Email</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email"
+              required
+              [(ngModel)]="email"
+              name="email"
+              class="form-input"
+            />
+            <span class="error-message" *ngIf="emailValidation">{{ emailValidation }}</span>
+          </div>
+
+          <!-- Mobile No Input -->
+          <div class="input-group">
+            <label for="mobile-no" class="form-label">Mobile No</label>
+            <input
+              type="number"
+              id="mobile-no"
+              placeholder="Enter your mobile number"
+              required
+              [(ngModel)]="mobileNo"
+              name="mobile-no"
+              class="form-input"
+            />
+            <span class="error-message" *ngIf="mobileNoValidation">{{ mobileNoValidation }}</span>
+          </div>
+
+          <!-- Password Input -->
+          <div class="input-group">
+            <label for="password" class="form-label">Password</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Enter your password"
+              required
+              [(ngModel)]="password"
+              name="password"
+              class="form-input"
+            />
+            <span class="error-message" *ngIf="passwordValidation">{{ passwordValidation }}</span>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn-submit">
+            Register
+          </button>
+
+          <!-- Link to login -->
+          <button [routerLink]="'/login'" class="btn-link">
+            Already have an account? Login
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

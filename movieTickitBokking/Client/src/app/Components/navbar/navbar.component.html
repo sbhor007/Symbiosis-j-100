@@ -1,0 +1,40 @@
+<nav class="navbar">
+  <!-- Logo Section -->
+  <div class="Logo cursor-pointer">
+    <h1
+      [routerLink]="''"
+      class="logo-text"
+    >
+      MoviesLogo
+    </h1>
+  </div>
+
+  <!-- Navigation Menu -->
+  <div class="nav-menu">
+    <ul class="nav-list">
+      <li
+        *ngFor="let item of navMenus"
+        [routerLink]="item.path"
+        class="nav-item"
+      >
+        {{ item.item }}
+      </li>
+    </ul>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <div class="nav-button">
+    <button
+    routerLink="/login"
+      class="login-btn"
+    >
+      Login
+    </button>
+    <button
+    routerLink="/register"
+      class="register-btn"
+    >
+      Register
+    </button>
+  </div>
+</nav>

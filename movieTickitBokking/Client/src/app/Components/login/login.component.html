@@ -1,0 +1,72 @@
+<app-navbar></app-navbar>
+<div [ngStyle]="{ 'background-image': 'url(' + imagePath + ')' }" class="background-container">
+  <div class="login-container">
+    <!-- Left side: Red background section -->
+    <div class="login-left">
+      <span class="login-left-text"></span>
+    </div>
+
+    <!-- Right side: Login form -->
+    <div class="login-form">
+      <div class="form-container">
+        <h2 class="form-title">User Login</h2>
+
+        <form (ngSubmit)="login()" class="form">
+          <!-- Username Input -->
+          <div class="input-group">
+            <label for="username" class="input-label">Username</label>
+            <input
+              type="text"
+              id="username"
+              placeholder="Enter Email"
+              required
+              [(ngModel)]="username"
+              name="username"
+              class="input-field"
+            />
+          </div>
+
+          <!-- Password Input -->
+          <div class="input-group">
+            <label for="password" class="input-label">Password</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Enter your password"
+              required
+              [(ngModel)]="password"
+              name="password"
+              class="input-field"
+            />
+          </div>
+
+          <!-- Admin Checkbox -->
+          <div class="input-group checkbox-group">
+            <input
+              type="checkbox"
+              id="isAdmin"
+              [(ngModel)]="isAdmin"
+              name="isAdmin"
+              class="checkbox"
+            />
+            <label for="isAdmin" class="checkbox-label">Log in as Admin</label>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn-submit">Login</button>
+
+          <!-- Register Link -->
+          <div class="register-link">
+            <button [routerLink]="'/register'" class="link">Don't have an account? Register</button>
+          </div>
+
+          <!-- Forgot Password Link -->
+          <div class="forgot-password-link">
+            <p [routerLink]="'/forgot-password'" class="link">Forgot Password?</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+  

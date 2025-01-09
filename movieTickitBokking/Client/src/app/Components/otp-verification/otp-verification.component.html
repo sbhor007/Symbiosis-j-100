@@ -1,0 +1,64 @@
+<form class="w-full">
+  <!-- OTP Input -->
+  {{ this.otp }}
+  <div class="input-group ">
+    <label for="otp" class="font-medium">OTP</label><br />
+    <input
+      type="text"
+      id="otp"
+      placeholder="Enter the OTP"
+      required
+      [(ngModel)]="inputOtp"
+      name="otp"
+      class="input-field"
+    />
+    <!-- Error Message -->
+    <span class="error-message" *ngIf="otpValidation">{{ otpValidation }}</span>
+  </div>
+  
+  <!-- Verify OTP Button -->
+  <button
+    type="submit"
+    (click)="verifyOtp()"
+    class="btn-submit"
+  >
+    Verify OTP
+  </button>
+  
+  <!-- New Password Input -->
+  <div *ngIf="isOtpVerified" class="input-group ">
+    <label for="new-password" class="font-medium">New Password</label><br />
+    <input
+      type="password"
+      id="new-password"
+      placeholder="Enter your new password"
+      required
+      [(ngModel)]="newPassword"
+      name="new-password"
+      class="input-field"
+    />
+    
+    <label for="confirm-password" class="font-medium">Confirm Password</label><br />
+    <input
+      type="password"
+      id="confirm-password"
+      placeholder="Confirm your new password"
+      required
+      [(ngModel)]="confirmPassword"
+      name="confirm-password"
+      class="input-field"
+    />
+    
+    <!-- Error Message -->
+    <span class="error-message" *ngIf="passwordValidation">{{ passwordValidation }}</span>
+
+    <!-- Change Password Button -->
+    <button
+      type="submit"
+      (click)="changePassword()"
+      class="btn-submit"
+    >
+      Change Password
+    </button>
+  </div>
+</form>

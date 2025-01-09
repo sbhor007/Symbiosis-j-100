@@ -1,0 +1,10 @@
+.welcome-message {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2d3748;
+}

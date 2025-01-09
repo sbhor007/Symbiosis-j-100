@@ -1,0 +1,22 @@
+<div class="navbar-main">
+    <!-- Logo Section -->
+    <div class="navbar-logo">
+        <h1 [routerLink]="'/admin-dashboard'">ADMIN-PANNEL</h1>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="navbar-menu">
+        <ul class="navbar-menu-list">
+            <li *ngFor="let item of adminNavMenus" class="navbar-menu-item">
+                <a [routerLink]="item.path">{{ item.name }}</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="navbar-buttons">
+        <button (click)="logout()" class="logout-button">
+            Logout
+        </button>
+    </div>
+</div>

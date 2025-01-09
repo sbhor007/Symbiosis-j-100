@@ -1,0 +1,44 @@
+/* Input fields */
+.input-field {
+    outline: none;
+    border-bottom: 1px solid #d1d5db;
+    padding: 0.25rem 0.5rem;
+    width: 100%;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .input-field:focus {
+    border-color: #3b82f6; /* Blue color on focus */
+    box-shadow: 0 0 0 1px #3b82f6;
+  }
+  
+  /* Button styling */
+  .btn-submit {
+    width: 100%;
+    background-color: #16a34a; /* Green background */
+    border-radius: 0.375rem;
+    padding: 0.5rem;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-submit:hover {
+    background-color: #15803d; /* Darker green on hover */
+  }
+  
+  /* Spacing between input groups */
+  .input-group {
+    padding-top: 1.25rem;
+    padding-bottom: 0.5rem;
+    width: 100%;
+  }
+  
+  /* Error message styling */
+  .error-message {
+    color: #f87171;
+    font-size: 0.875rem;
+  }
+  

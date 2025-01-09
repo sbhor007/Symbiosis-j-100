@@ -1,0 +1,22 @@
+<div class="feedback-container">
+  <div *ngFor="let feedback of feedbacks">
+    <div class="feedback-card">
+      <div class="feedback-card-body">
+        <div class="feedback-header">
+          <div>
+            <span class="feedback-label">Email: </span>
+            <span>{{ feedback.email }}</span>
+          </div>
+        </div>
+        <div>
+          <span class="feedback-label">Message: </span>
+          <span>{{ feedback.message }}</span>
+        </div>
+        <div>
+          <span class="feedback-label">Date: </span>
+          <span>{{ feedback.updatedAt | date: 'short' }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
